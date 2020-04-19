@@ -53,7 +53,7 @@ Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifie
 ##### B. Wire up everything
 B1. Connect the RTD sensor to the MAX31865
 
-Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/rtd-wiring-config#3-wire-sensors-4-10) from Adafruit to see how to get the wires from your 3-wire RTD sensor into the contacts. The terminals at the end of the wires are forked, but the contacts are not big enough, so either snap one end of the terminal off (which is what I did) or I guess you could try and smash them together? I don't know, I just wiggled one end of the terminal back and forth with some needle-nose pliers until it snapped off.
+Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/rtd-wiring-config#3-wire-sensors-4-10) from Adafruit to see how to get the wires from your 3-wire RTD sensor into the contacts. The terminals at the end of the wires are forked, but this makes them a really bad fit for the terminal blocks, so either snap one end of the terminal off (which is what I did) or I guess you could try and smash them together? I don't know, I just wiggled one end of the terminal on each wire back and forth with some needle-nose pliers until it snapped off.
 
 B2. Wire up everything else, including your DHT11 environmental sensor. Just follow this fun diagram!
 
@@ -71,7 +71,7 @@ Oh, this is fun. You'll be using MODBUS protocol.
 2. Go to Config \ Device...
 3. Select Meter:MODBUS
 
-![configdevice](https://github.com/austinj/arduinosan/blob/master/images/configdevice.jpg "Config \ Device")
+![configdevice](https://github.com/austinj/arduinosan/blob/master/images/configdevice.png "Config \ Device")
 
 4. After you press OK, you'll get sent to the Ports Configuration window.
 
@@ -83,7 +83,7 @@ Oh, this is fun. You'll be using MODBUS protocol.
 
 8. Pop your serial port name into "Comm Port" and then set everything else to match below.
 
-![modbus](https://github.com/austinj/arduinosan/blob/master/images/modbus.jpg "Modbus")
+![modbus](https://github.com/austinj/arduinosan/blob/master/images/modbus.png "Modbus")
 
 9. Click OK, and start up a roast in Artisan! You should see values for ET and BT. You did it.
 
@@ -97,5 +97,6 @@ This is pretty much just a smashing together of code from:
 - [Lukeinator42's Artisan-friendly modbus arduino sketch](https://github.com/lukeinator42/coffee-roaster)
 - [Adafruit's MAX31865 documentation](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview)
 - [Adafruit's DHT11 documentation](https://learn.adafruit.com/dht/using-a-dhtxx-sensor)
+
 and information from:
 - [This thread on home-barista.com](https://www.home-barista.com/home-roasting/getting-artisan-to-talk-to-arduino-t58234.html)
