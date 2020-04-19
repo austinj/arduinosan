@@ -33,3 +33,19 @@ Information on sketches here.
 - Diagonal cutters
 - X-Acto knife (because you have to cut a wire on the MAX31865) 
 - But really, just buy [this electronics starter kit](https://www.adafruit.com/product/136), which includes a half-size breadboard too, so hey, cross that off your list
+
+#### Directions
+
+1. Get the MAX31865 ready
+  1a. Configure the board for a 3-wire set-up
+  1a. Solder the headers on
+  1b. Solder the terminal blocks on
+2. Wire up everything
+  2a. Connect the RTD sensor to the MAX31865
+  2b. Wire up everything else. Just follow this fun diagram!
+3. Upload the arduino sketch
+4. Configure Artisan
+
+#### Credits
+
+- [Adafruit's MAX31865 tutorial](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview)
