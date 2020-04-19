@@ -44,11 +44,11 @@ If you've never worked with a PCB before, this is going to be a fun little adven
 
 First, we cut a wire between two pads. "Cutting a wire" on a board means you're straight up using a razor to slice through a tiny line of copper that's making a connection. You're cutting the wire that connects (a) the pad that is directly above the "24" text and (b) the pad to its right.
 
-![cutting](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Cutting the wire")
+![cutting](https://github.com/austinj/arduinosan/blob/master/images/adafruit_products_pinouts_wire.jpg "Cutting the wire")
 
 Second, we solder two pads together in two separate places. You're soldering the (a) 2/3 wire pads and (b) the two right-most pads above the "24 3" text.
   
-![jumping](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Jumping the pads")
+![jumping](https://github.com/austinj/arduinosan/blob/master/images/adafruit_products_pinouts_jumpers.jpg "Jumping the pads")
 
 A2. Solder the headers and terminal blocks on
   
