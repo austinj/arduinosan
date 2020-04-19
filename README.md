@@ -53,7 +53,7 @@ Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifie
 ##### B. Wire up everything
 B1. Connect the RTD sensor to the MAX31865
 
-Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/rtd-wiring-config#3-wire-sensors-4-10) from Adafruit to see how to get the wires from your 3-wire RTD sensor into the contacts. The terminals at the end of the wires are forked, but the contacts are not big enough, so either snap one end of the terminal off (which is what I did) or I guess you could try and smash them together? I don't know, I just wiggled one end of the terminal back and forth with some needle-nose pliers until it snapped off.
+Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/rtd-wiring-config#3-wire-sensors-4-10) from Adafruit to see how to get the wires from your 3-wire RTD sensor into the contacts. The terminals at the end of the wires are forked, but this makes them a really bad fit for the terminal blocks, so either snap one end of the terminal off (which is what I did) or I guess you could try and smash them together? I don't know, I just wiggled one end of the terminal on each wire back and forth with some needle-nose pliers until it snapped off.
 
 B2. Wire up everything else, including your DHT11 environmental sensor. Just follow this fun diagram!
 
