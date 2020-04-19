@@ -93,10 +93,7 @@ May I suggest a [lovely East African dry process](https://www.sweetmarias.com/et
 
 ### Credits
 
-This is pretty much just a smashing together of code from:
 - [Lukeinator42's Artisan-friendly modbus arduino sketch](https://github.com/lukeinator42/coffee-roaster)
 - [Adafruit's MAX31865 documentation](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview)
 - [Adafruit's DHT11 documentation](https://learn.adafruit.com/dht/using-a-dhtxx-sensor)
-
-and information from:
 - [This thread on home-barista.com](https://www.home-barista.com/home-roasting/getting-artisan-to-talk-to-arduino-t58234.html)
