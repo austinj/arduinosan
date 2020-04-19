@@ -57,7 +57,7 @@ Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifie
 
 B2. Wire up everything else, including your DHT11 environmental sensor. Just follow this fun diagram!
 
-![fritzing](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Fritzing diagram")
+![fritzing](https://github.com/austinj/arduinosan/blob/master/images/arduinosan_bb.jpg "Fritzing diagram")
 
 ##### C. Upload the arduino sketch to the Metro 328
 
