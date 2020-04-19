@@ -20,13 +20,14 @@ Information on sketches here.
 - Platinum RTD sensor [(Adafruit)](https://www.adafruit.com/product/3290)
 - DHT11 basic temperature-humidity sensor + extras [(Adafruit)](https://www.adafruit.com/product/386)
   - You need a 4.7K or 10K resistor to pull it up, which is the "extra" that's included
-##### Other stuff you'll probably need
+##### Other stuff you'll probably need if you don't have it lying around
 - Breadboard [(Adafruit)](https://www.adafruit.com/product/64)
 - Jumper wires or other wire for breadboarding [(Adafruit)](https://www.adafruit.com/product/153)
 - Micro USB to (your USB flavor here, mine's USB C) for Metro 328 [(Adafruit)](https://www.adafruit.com/product/3878)
+  - Make sure the cable is *not* data-only if you want to run power through it instead of the DC jack
 ##### Optional but nice 
 - Mounting plate for Metro 328 and breadboard [(Adafruit)](https://www.adafruit.com/product/275)
-##### If you've never done an electronics project before, you'll also need
+##### If you've never done an electronics project before, you'll also have to get
 - Soldering iron
 - Solder
 - Diagonal cutters
