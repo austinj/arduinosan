@@ -1,8 +1,6 @@
 # arduinosan
 ## Artisan-compatible arduino sketches and tutorial for sensing bean temp and environmental temp
 
-## NOTE: Only bean temp currently works. DHT11 code broke somehow, which means environmental temp isn't working.
-
 When you're roasting coffee, it's nice to be able to measure the temperature within the bean mass that you're roasting. Knowing the environmental temperature is nice too, since the ambient temperature will impact the corresponding energy and time that needs to be input into the roast. However, if you're using a roaster that lacks a thermocouple or thermistor, you need to roll your own solution. You can buy one off the shelf (except it won't have environmental temp, so come on), but where's the fun in that? Let's make our own!
 
 Since you're collecting these temperature data digitally, you probably also want to record and monitor them digitally as well. Artisan is open-source roasting software that facilitates the generation of roasting curves, which are the core tool for understanding and adjusting a roast as it happens. Getting data to Artisan can be pretty tricky.
