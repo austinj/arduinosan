@@ -71,7 +71,7 @@ Oh, this is fun. You'll be using MODBUS protocol.
 2. Go to Config \ Device...
 3. Select Meter:MODBUS
 
-![configdevice](https://github.com/austinj/arduinosan/blob/master/images/configdevice.jpg "Config \ Device")
+![configdevice](https://github.com/austinj/arduinosan/blob/master/images/configdevice.png "Config \ Device")
 
 4. After you press OK, you'll get sent to the Ports Configuration window.
 
@@ -83,7 +83,7 @@ Oh, this is fun. You'll be using MODBUS protocol.
 
 8. Pop your serial port name into "Comm Port" and then set everything else to match below.
 
-![modbus](https://github.com/austinj/arduinosan/blob/master/images/modbus.jpg "Modbus")
+![modbus](https://github.com/austinj/arduinosan/blob/master/images/modbus.png "Modbus")
 
 9. Click OK, and start up a roast in Artisan! You should see values for ET and BT. You did it.
 
