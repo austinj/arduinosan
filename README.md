@@ -97,3 +97,4 @@ May I suggest a [lovely East African dry process](https://www.sweetmarias.com/et
 - [Adafruit's MAX31865 documentation](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview)
 - [Adafruit's DHT11 documentation](https://learn.adafruit.com/dht/using-a-dhtxx-sensor)
 - [This thread on home-barista.com](https://www.home-barista.com/home-roasting/getting-artisan-to-talk-to-arduino-t58234.html)
+- [Adafruit Discord, thanks @nis for being a great teacher](https://discordapp.com/invite/adafruit)
