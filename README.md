@@ -3,13 +3,9 @@
 
 When you're roasting coffee, it's nice to be able to measure the temperature within the bean mass that you're roasting. Knowing the environmental temperature is nice too, since the ambient temperature will impact the corresponding energy and time that needs to be input into the roast. However, if you're using a roaster that lacks a thermocouple or thermistor, you need to roll your own solution. You can buy one off the shelf (except it won't have environmental temp, so come on), but where's the fun in that? Let's make our own!
 
-Since you're collecting these temperature data digitally, you probably also want to record and monitor them digitally as well. Artisan is open-source roasting software that facilitates the generation of roasting curves, which are the core tool for understanding and adjusting a roast as it happens. Getting data to Artisan is a real fun little problem to solve.
+Since you're collecting these temperature data digitally, you probably also want to record and monitor them digitally as well. Artisan is open-source roasting software that facilitates the generation of roasting curves, which are the core tool for understanding and adjusting a roast as it happens. Getting data to Artisan can be pretty tricky.
 
 There are a handful of solutions out there for solving this fun little niche problem, but most of them aren't very well documented. So, here we go!
-
-### Arduino sketches
-
-Information on sketches here.
 
 ### Electronics configuration
 
@@ -40,9 +36,9 @@ Information on sketches here.
 
 A1. Configure the board for a 3-wire set-up
 
-If you've never worked with a PCB before, this is going to be a fun little adventure. Some PCBs you buy require actual physical changes to the board to make them work for your specific configuration. These are referred to as "jumpers". The MAX31865 has jumpers to configure the board for 2-, 3-, or 4-wire RTD sensors. We're using a 3-wire, so we've got to do two things.
+If you've never worked with a PCB before, this is going to be an adventure. Some PCBs you buy require actual physical changes to the board to make them work for your specific configuration. These are referred to as "jumpers". The MAX31865 has jumpers to configure the board for 2-, 3-, or 4-wire RTD sensors. We're using a 3-wire, so we've got to do two things.
 
-First, we cut a wire between two pads. "Cutting a wire" on a board means you're straight up using a razor to slice through a tiny line of copper that's making a connection. You're cutting the wire that connects (a) the pad that is directly above the "24" text and (b) the pad to its right.
+First, we cut a wire between two pads. "Cutting a wire" on a board means you're straight up using a razor to slice through a tiny line of copper that's making a connection. You're cutting the wire that connects (a) the pad that is directly above the "24" text and (b) the pad to its right. So, take your x-acto, and cut that thing. Realize that you need to get down in there, so trust yourself to apply some pressure and slice that copper out.
 
 ![cutting](https://github.com/austinj/arduinosan/blob/master/images/adafruit_products_pinouts_wire.jpg "Cutting the wire")
 
@@ -57,16 +53,49 @@ Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifie
 ##### B. Wire up everything
 B1. Connect the RTD sensor to the MAX31865
 
-![rtd](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Connecting RTD sensor")
+Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/rtd-wiring-config#3-wire-sensors-4-10) from Adafruit to see how to get the wires from your 3-wire RTD sensor into the contacts. The terminals at the end of the wires are forked, but the contacts are not big enough, so either snap one end of the terminal off (which is what I did) or I guess you could try and smash them together? I don't know, I just wiggled one end of the terminal back and forth with some needle-nose pliers until it snapped off.
 
-B2. Wire up everything else. Just follow this fun diagram!
+B2. Wire up everything else, including your DHT11 environmental sensor. Just follow this fun diagram!
 
 ![fritzing](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Fritzing diagram")
 
-##### C. Upload the arduino sketch
+##### C. Upload the arduino sketch to the Metro 328
+
+Download "max31865_dht_artisan.ino" from this repository. Open it up in Arduino and push it to your Metro 328. It's not sending anything to your serial monitor, so don't look for anything in there. It's time for some Artisan config screens.
 
 ##### D. Configure Artisan
 
-#### Credits
+Oh, this is fun. You'll be using MODBUS protocol.
 
-- [Adafruit's MAX31865 tutorial](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview)
+1. Open Artisan
+2. Go to Config \ Device...
+3. Select Meter:MODBUS
+
+![configdevice](https://github.com/austinj/arduinosan/blob/master/images/configdevice.jpg "Config \ Device")
+
+4. After you press OK, you'll get sent to the Ports Configuration window.
+
+5. Before we move on, we need to identify the path for your Metro 328's serial port.
+
+6. Make sure your Metro 328 is on and talking to your computer.
+
+7. If you're running OS X like me, open a terminal window and enter `ls /dev/tty.*`. From those entries listed, you gotta figure out which one is your port name. I used [this thread from StackOverflow](https://stackoverflow.com/questions/12254378/how-to-find-the-serial-port-number-on-mac-os-x). Mine was "/dev/tty.SLAB_USBtoUART" (note that you need the whole path name, including "/dev/"!). If you're not running OS X, or if you think you're doing this part wrong, just Google around for "serial port [your operating system here]", maybe add "arduino" or "metro 328" in there. You should be able to figure it out.
+
+8. Pop your serial port name into "Comm Port" and then set everything else to match below.
+
+![modbus](https://github.com/austinj/arduinosan/blob/master/images/modbus.jpg "Modbus")
+
+9. Click OK, and start up a roast in Artisan! You should see values for ET and BT. You did it.
+
+##### E. Roast some coffee!
+
+May I suggest a [lovely East African dry process](https://www.sweetmarias.com/ethiopia-organic-dry-process-sidama-keramo-6287-2.html)?
+
+### Credits
+
+This is pretty much just a smashing together of code from:
+- [Lukeinator42's Artisan-friendly modbus arduino sketch](https://github.com/lukeinator42/coffee-roaster)
+- [Adafruit's MAX31865 documentation](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview)
+- [Adafruit's DHT11 documentation](https://learn.adafruit.com/dht/using-a-dhtxx-sensor)
+and information from:
+- [This thread on home-barista.com](https://www.home-barista.com/home-roasting/getting-artisan-to-talk-to-arduino-t58234.html)
