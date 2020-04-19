@@ -1,6 +1,8 @@
 # arduinosan
 ## Artisan-compatible arduino sketches and tutorial for sensing bean temp and environmental temp
 
+## NOTE: Only bean temp currently works. DHT11 code broke somehow, which means environmental temp isn't working.
+
 When you're roasting coffee, it's nice to be able to measure the temperature within the bean mass that you're roasting. Knowing the environmental temperature is nice too, since the ambient temperature will impact the corresponding energy and time that needs to be input into the roast. However, if you're using a roaster that lacks a thermocouple or thermistor, you need to roll your own solution. You can buy one off the shelf (except it won't have environmental temp, so come on), but where's the fun in that? Let's make our own!
 
 Since you're collecting these temperature data digitally, you probably also want to record and monitor them digitally as well. Artisan is open-source roasting software that facilitates the generation of roasting curves, which are the core tool for understanding and adjusting a roast as it happens. Getting data to Artisan can be pretty tricky.
@@ -21,13 +23,13 @@ There are a handful of solutions out there for solving this fun little niche pro
 - Jumper wires or other wire for breadboarding [(Adafruit)](https://www.adafruit.com/product/153)
 - Micro USB to (your USB flavor here, mine's USB C) for Metro 328 [(Adafruit)](https://www.adafruit.com/product/3878)
   - Make sure the cable is *not* data-only if you want to run power through it instead of the DC jack
-##### Optional but nice 
+##### Optional but nice
 - Mounting plate for Metro 328 and breadboard [(Adafruit)](https://www.adafruit.com/product/275)
 ##### If you've never done an electronics project before, you'll also have to get
 - Soldering iron
 - Solder
 - Diagonal cutters
-- X-Acto knife (because you have to cut a wire on the MAX31865) 
+- X-Acto knife (because you have to cut a wire on the MAX31865)
 - But really, just buy [this electronics starter kit](https://www.adafruit.com/product/136), which includes a half-size breadboard too, so hey, cross that off your list
 
 #### Directions
@@ -43,13 +45,13 @@ First, we cut a wire between two pads. "Cutting a wire" on a board means you're 
 ![cutting](https://github.com/austinj/arduinosan/blob/master/images/adafruit_products_pinouts_wire.jpg "Cutting the wire")
 
 Second, we solder two pads together in two separate places. You're soldering the (a) 2/3 wire pads and (b) the two right-most pads above the "24 3" text.
-  
+
 ![jumping](https://github.com/austinj/arduinosan/blob/master/images/adafruit_products_pinouts_jumpers.jpg "Jumping the pads")
 
 A2. Solder the headers and terminal blocks on
-  
+
 Use [this guide](https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/assembly) from Adafruit; it walks you through this whole step with lots of lovely pictures.
-  
+
 ##### B. Wire up everything
 B1. Connect the RTD sensor to the MAX31865
 
@@ -61,7 +63,7 @@ B2. Wire up everything else, including your DHT11 environmental sensor. Just fol
 
 ##### C. Upload the arduino sketch to the Metro 328
 
-Download "max31865_dht_artisan.ino" from this repository. Open it up in Arduino and push it to your Metro 328. It's not sending anything to your serial monitor, so don't look for anything in there. It's time for some Artisan config screens.
+Download "max31865_artisan.ino" from this repository. Open it up in Arduino and push it to your Metro 328. It's not sending anything to your serial monitor, so don't look for anything in there. It's time for some Artisan config screens.
 
 ##### D. Configure Artisan
 
