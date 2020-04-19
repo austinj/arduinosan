@@ -1,4 +1,15 @@
 /*************************************************** 
+  ARDUINOSAN 1.0
+  For sensing bean temp and environmental temp and sending it to Artisan
+
+  Slapped together by Austin Johnson (austinj@gmail.com)
+
+  Code mostly adapted from:
+
+  1. Lukeinator42 - https://github.com/lukeinator42/coffee-roaster
+  2. This Adafruit library - https://github.com/adafruit/DHT-sensor-library
+  3. And this Adafruit library -->
+  
   This is a library for the Adafruit PT100/P1000 RTD Sensor w/MAX31865
 
   Designed specifically to work with the Adafruit RTD Sensor
