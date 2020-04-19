@@ -27,6 +27,7 @@
 
 
 #include <Adafruit_MAX31865.h>
+#include "DHT.h"
 #include <ModbusRtu.h>
 
 
@@ -58,8 +59,22 @@ Adafruit_MAX31865 thermo = Adafruit_MAX31865(10, 11, 12, 13);
 int ssr = 5;  
 
 
+#define DHTPIN 2     // Digital pin connected to the DHT sensor
+// Feather HUZZAH ESP8266 note: use pins 3, 4, 5, 12, 13 or 14 --
+// Pin 15 can work but DHT must be disconnected during program upload.
+
+// Uncomment whatever type you're using!
+#define DHTTYPE DHT11   // DHT 11
+//#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
+//#define DHTTYPE DHT21   // DHT 21 (AM2301)
+
+DHT dht(DHTPIN, DHTTYPE);
+
+
+
 void setup() {
   thermo.begin(MAX31865_3WIRE);  // set to 2WIRE or 4WIRE as necessary
+  dht.begin();
   pinMode(ssr, OUTPUT);
   slave = Modbus(1,0,0);
   slave.begin( 19200 ); // 19200 baud, 8-bits, even, 1-bit stop
@@ -69,6 +84,7 @@ void setup() {
 void loop() {
   
    au16data[2] = ((uint16_t) thermo.temperature(RNOMINAL, RREF));
+   au16data[3] = ((uint16_t) dht.readTemperature());
    
    slave.poll( au16data, 16 );
 

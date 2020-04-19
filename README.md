@@ -63,7 +63,7 @@ B2. Wire up everything else, including your DHT11 environmental sensor. Just fol
 
 ##### C. Upload the arduino sketch to the Metro 328
 
-Download "max31865_artisan.ino" from this repository. Open it up in Arduino and push it to your Metro 328. It's not sending anything to your serial monitor, so don't look for anything in there. It's time for some Artisan config screens.
+Download "max31865_dht_artisan.ino" from this repository. Open it up in Arduino and push it to your Metro 328. It's not sending anything to your serial monitor, so don't look for anything in there. It's time for some Artisan config screens.
 
 ##### D. Configure Artisan
 
