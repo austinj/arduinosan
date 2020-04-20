@@ -1,5 +1,5 @@
 # arduinosan
-## Artisan-compatible arduino sketches and tutorial for sensing bean temp and environmental temp
+## Artisan-compatible arduino sketches and tutorial for sensing bean temp and ambient temp
 
 ### NOTE: Gullygossner [pointed out](https://www.reddit.com/r/roasting/comments/g4aodl/arduino_to_artisan_code_and_walkthrough/fnwm0se?utm_source=share&utm_medium=web2x) that I messed up my terminology in a fairly significant way. I said I was measuring ET, but I'm actually measuring ambient temperature This'll require some changes to the Artisan set-up. Right now, ambient temperature is being registered as ET in Artisan. My mistake. Update coming soon! [4/20/20]
 
