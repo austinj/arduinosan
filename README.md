@@ -15,7 +15,7 @@ There are a handful of solutions out there for solving this fun little niche pro
 ##### Core components
 - Metro 328 [(Adafruit)](https://www.adafruit.com/product/2488)
 - PT1000 RTD Temperature Sensor Amplifier - MAX31865 [(Adafruit)](https://www.adafruit.com/product/3648)
-- Platinum RTD sensor [(Adafruit)](https://www.adafruit.com/product/3290)
+- PT1000 Platinum RTD sensor [(Adafruit)](https://www.adafruit.com/product/3984)
 - DHT11 basic temperature-humidity sensor + extras [(Adafruit)](https://www.adafruit.com/product/386)
   - You need a 4.7K or 10K resistor to pull it up, which is the "extra" that's included
 ##### Other stuff you'll probably need if you don't have it lying around
